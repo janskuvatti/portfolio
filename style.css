@@ -1,0 +1,285 @@
+	
+	body { 
+  /* background: url('bg.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; */
+  background: #EB5757;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #000000, #EB5757);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #000000, #EB5757); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.col-sm-4{
+	background-color: #fafafa!important;
+}
+.container{
+padding: 25px;   
+}    
+	.navbar-custom .navbar-text {
+    	color: white;
+
+    }
+
+
+    a {
+    	color: white;
+    	font-weight: bold;
+
+    	font-family: 'Archivo Black', sans-serif;
+
+    }
+
+    a:hover {
+    	background: rgb(104, 121, 255);
+    }
+
+    /* aktiivisen & hover-linkin väri */
+
+    .nav-item .dropdown-menu a:hover {
+    	color: black !important;
+    	background: black !important;
+    	/*rgb(104, 121, 255)*/
+    	cursor: pointer;
+    }
+
+    .custom-toggler.navbar-toggler {
+    	/*  	border-color: rgb(255, 102, 203);*/
+    	background-color: #e62a59!important;
+    	border: 2px solid black;
+    }
+
+    #yhteydenotto {
+    	background-color: #fafafa;
+    	text-align: center;
+    	border: 5px solid black;
+    	font-family: 'Kanit', sans-serif;
+
+    }
+
+    #introduction {
+
+    	text-align: justify;
+    	text-justify: inter-word;
+    }
+
+    #esittely {
+    	border: 5px solid black;
+
+    }
+
+    #intro {
+    	border-radius: 50%;
+    	width: 15%;
+    	border: 5px solid black;
+    }
+
+    #foot {
+    	/*background-color: #ffccda;*/
+    	background-color: #e62a59;
+    	border: 10px solid black;
+    	width: 100%;
+    	height: 70px;
+    	margin: auto;
+    	text-align: center;
+    	margin-top: 50px;
+
+    	color: black;
+    	font-size: 25px;
+    	overflow: hidden;
+    	font-family: 'Knewave', cursive;
+    }
+
+    #card-header {
+		/* background-color: #fccd4f; */
+		background-color: #e62a59;
+    	text-align: center;
+	}
+	#card-header a {
+		/* background-color: #fccd4f; */
+color: white;
+	}
+	.card-body {
+		background-color: #ffffff!important;
+	}
+
+    #suljeBoxi {
+
+    	background-color: bisque!important
+    }
+
+    .custom-toggler .navbar-toggler-icon {
+    	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(5, 3, 10)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    	font-family: 'Righteous', cursive;
+    }
+
+    /*Scroll-spy*/
+
+    .nav-link.active {
+    	color: black !important;
+
+    }
+
+    body {
+    	background-color: deeppink;
+    	position: relative;
+
+    	font-family: 'Kanit', sans-serif;
+
+    }
+
+    #accordion {
+    	font-family: 'Kanit', sans-serif;
+    	border: 5px solid black;
+
+    }
+
+   
+    h2 {
+    	font-size: 18px;
+    	font-weight: bold;
+
+    	font-family: 'Kanit', sans-serif;
+
+    }
+/* 
+    .carousel-inner img {
+    	height: 600px;
+    	margin: auto;
+    	height: auto;
+    }
+
+    .carousel-caption {
+    	text-decoration-color: #030303;
+
+    	font-family: 'Kanit', sans-serif;
+
+    } */
+
+    #demo {
+    	width: 100%;
+    	/* Set width to 100% */
+    	margin: auto;
+    	min-height: 200px;
+    	border: 5px solid black;
+    }
+
+
+    .col-sm-4 {
+
+    	font-family: 'Kanit', sans-serif;
+
+    	background-color: bisque;
+    }
+
+    .jumbotron {
+
+    	font-family: 'Kanit', sans-serif;
+
+
+    	background-color: bisque;
+    }
+
+    container {
+
+    	font-family: 'Kanit', sans-serif;
+
+    	background-color: bisque;
+    }
+#example-image{
+	width: 80%;
+	height: 60%;
+}
+    a:nav-link{
+    	margin-left: 10px!important;
+    }
+
+    label {
+
+    	font-family: 'Kanit', sans-serif;
+
+    	width: 6em;
+    	display: inline-block;
+    }
+
+    /*  label {
+    	display: block;
+    }*/
+
+
+    
+.thumbnail img {
+width: 250px;
+height: 250px;
+margin: 0 auto;
+}
+
+
+    #info {
+    	border: 5px solid black!important;
+    	background-color: #fafafa!important;
+    	text-align: center!important;
+    	font-weight: bold!important;
+    	font-size: 25px;
+    }
+
+.nav-link{
+	color: white;
+}
+
+#n{
+position: relative;
+    transform: translate(-50%, -50%);
+    animation: fill 0.5s ease forwards 3s;
+
+}
+#n path:nth-child(1){
+stroke-dasharray: 294;
+stroke-dashoffset: 294;
+animation: line-anim 2s ease forwards;
+}
+#n path:nth-child(2){
+    stroke-dasharray: 458;
+    stroke-dashoffset: 458;  
+    animation: line-anim 2s ease forwards 0.3s;
+
+}
+#n path:nth-child(3){
+    stroke-dasharray: 402;
+    stroke-dashoffset: 402;
+    animation: line-anim 2s ease forwards 0.6s;
+
+}
+#n path:nth-child(4){
+    stroke-dasharray: 237.86697387695312;
+    stroke-dashoffset: 237.86697387695312;
+    animation: line-anim 2s ease forwards 0.9s;
+
+}
+#n path:nth-child(5){
+    stroke-dasharray: 482;
+    stroke-dashoffset: 482;
+    animation: line-anim 2s ease forwards 1.2s;
+
+}
+#n path:nth-child(6){
+    stroke-dasharray: 457;
+    stroke-dashoffset: 457;  
+    animation: line-anim 2s ease forwards 1.5s;
+
+}
+
+@keyframes line-anim{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes fill{
+    from{
+        fill: transparent;
+    }
+
+    to{
+        fill: white;
+    }
+}

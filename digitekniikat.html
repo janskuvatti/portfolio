@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--Oma CSS-->
+	<link rel="stylesheet" href="style.css">
+	<!-- <link rel="stylesheet" href="animations.css"> -->
+<!--animate.CSS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+
+	
+	<title>Portfolio||Janina Porkka</title>
+		<!--gaalleria-->
+		<link rel="stylesheet" href="thumbnail-gallery.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+
+
+	</script>
+
+
+	<!--</script>-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/boots
+trap.min.js"></script>
+	<!--ikonit-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!--Bootstrap-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+	<!--Google analytics-->
+
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+	<!--Firebase&firestore-->
+
+	<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-
+app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-
+firestore.js"></script>
+	<!--Linkki JS-tiedostoon-->
+	<script src="portfolio.js"></script>
+	<!--Tyylimuokkaukset jQuerylla & google fonts-->
+
+	<link href="https://fonts.googleapis.com/css?family=Knewave&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Kanit|Muli" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Kanit|Muli" rel="stylesheet">
+
+	<script>
+		$(document).ready(function() {
+
+
+			$('nav').css('background-color', '#e62a59');
+			$('footer').css('font-weight', 'bold');
+			$(".card-body").css('background-color', '#c3bdbd ');
+
+			//$('body').css('background-color', 'white ');
+			$('button').css('background-color', 'rgba(248, 66, 108, 0.92)');
+
+			$(".modal-header").css('background-color', 'rgba(248, 66, 108, 0.92)');
+			$(".info").css('font-weight', 'bold');
+
+
+
+		});
+
+	</script>
+	<!--Lomakkeen tyylimääritykset-->
+	<style>
+	input,
+    select,
+    option,
+    textarea {
+
+    	font-family: 'Kanit', sans-serif;
+
+    	color: black;
+    	border: rgb(255, 102, 203) 5px solid;
+    }
+		
+    input[type="checkbox"],
+    input[type="radio"] {
+
+
+    	font-family: 'Kanit', sans-serif;
+
+    	outline: 2px solid rgb(196, 202, 248);
+    	outline-offset: -2px;
+    }
+
+
+    /* alasvetovalikko */
+
+    select option:hover,
+    select option {
+
+    	background: white !important;
+    	color: black !important;
+    }
+
+    select option:checked {
+    	background: rgb(196, 202, 248) !important;
+    	color: black;
+    }
+
+    select:focus {
+    	background: white !important;
+    	color: black;
+    }
+
+    select {
+
+    	border: 0;
+		background-color: #6b6b6b;
+    	color: black;
+    	padding: 2.5px;
+    }
+		    button[type=reset] {
+
+    	background-color: rgb(163, 35, 35);
+    	color: white;
+    	font-weight: bold;
+    	padding: 12px 20px;
+    	border: none;
+    	border-radius: 4px;
+    	cursor: pointer;
+
+    	font-family: 'Kanit', sans-serif;
+
+    }
+	</style>
+</head>
+
+<!--Navipalkki-->
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+	<header>
+		<div class="container" id="alku">
+			<nav class="navbar navbar-expand-lg navbar-custom fixed-top ">
+				<a class="navbar-brand" href="#alku" style="    	font-family: 'Archivo Black', sans-serif; color: white
+
+">Portfolio Janina Porkka</a>
+				<button class="navbar-toggler custom-toggler" id="hamburger" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" ariacontrols="navbarSupportedContent" aria-expanded="false" arialabel="Toggle
+navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="#alku">Etusivu<span class="sr-only">
+(current)</span></a>
+
+
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#esittely">Kuka olen?<span class="sr-only"></span></a></li>
+						<li class="nav-item">
+							<a class="nav-link" href="#osaaminen">Osaaminen</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#yhteydenotto">Ota yhteyttä</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#info">Yhteystiedot</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+
+	</header>
+
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<div id="animate" class="container">
+    <svg id="n" width="451" height="119" viewBox="0 0 451 119" fill="none" xmlns="http://www.w3.org/2000/svg">
+       
+        <path d="M53.52 84.344C53.52 90.008 52.992 94.808 51.936 98.744C50.976 102.584 49.44 105.752 47.328 108.248C45.216 110.648 42.576 112.376 39.408 113.432C36.336 114.584 32.688 115.16 28.464 115.16C22.8 115.16 17.904 113.72 13.776 110.84C9.744 107.864 6.672 102.92 4.56 96.008L16.512 91.976C18.24 99.944 22.224 103.928 28.464 103.928C31.824 103.928 34.512 102.824 36.528 100.616C38.64 98.408 39.696 94.664 39.696 89.384V12.2H53.52V84.344Z" stroke="#FFFCFC" stroke-width="6" mask="url(#path-1-outside-1)"/>
+        <path d="M105.764 45.752C97.6999 45.752 92.4679 49.736 90.0679 57.704L78.1159 53.672C81.9559 40.904 91.1719 34.52 105.764 34.52C115.844 34.52 123.092 37.064 127.508 42.152C132.02 47.144 134.276 55.352 134.276 66.776V100.76C134.276 102.296 134.612 103.352 135.284 103.928C136.052 104.408 136.964 104.648 138.02 104.648C138.788 104.648 139.604 104.552 140.468 104.36C141.332 104.072 142.148 103.736 142.916 103.352L145.22 112.28C143.684 113.048 142.004 113.72 140.18 114.296C138.356 114.872 136.34 115.16 134.132 115.16C130.676 115.16 127.748 114.344 125.348 112.712C123.044 110.984 121.652 107.72 121.172 102.92C119.732 104.456 118.1 105.992 116.276 107.528C114.452 108.968 112.436 110.264 110.228 111.416C108.116 112.568 105.812 113.48 103.316 114.152C100.916 114.824 98.3719 115.16 95.6839 115.16C92.8039 115.16 90.0679 114.584 87.4759 113.432C84.9799 112.376 82.8199 110.888 80.9959 108.968C79.1719 107.048 77.7319 104.792 76.6759 102.2C75.6199 99.512 75.0919 96.632 75.0919 93.56C75.0919 85.688 77.7319 79.544 83.0119 75.128C88.3879 70.712 95.7799 68.504 105.188 68.504C107.78 68.504 110.372 68.696 112.964 69.08C115.556 69.464 118.052 70.04 120.452 70.808V61.736C120.452 56.744 119.156 52.856 116.564 50.072C113.972 47.192 110.372 45.752 105.764 45.752ZM99.8599 103.928C103.508 103.928 107.06 103.064 110.516 101.336C114.068 99.512 117.38 97.064 120.452 93.992V80.024C118.436 79.352 116.276 78.824 113.972 78.44C111.668 78.056 109.412 77.864 107.204 77.864C104.804 77.864 102.5 78.104 100.292 78.584C98.0839 79.064 96.1159 79.88 94.3879 81.032C92.7559 82.184 91.4119 83.72 90.3559 85.64C89.3959 87.464 88.9159 89.72 88.9159 92.408C88.9159 95.576 89.9239 98.312 91.9399 100.616C93.9559 102.824 96.5959 103.928 99.8599 103.928Z" stroke="#FFFCFC" stroke-width="6" mask="url(#path-1-outside-1)"/>
+        <path d="M174.939 36.68L175.659 45.896C178.635 42.92 182.139 40.28 186.171 37.976C190.203 35.672 194.715 34.52 199.707 34.52C204.219 34.52 208.059 35.048 211.227 36.104C214.395 37.16 216.939 38.84 218.859 41.144C220.875 43.352 222.315 46.28 223.179 49.928C224.139 53.576 224.619 57.992 224.619 63.176V113H210.795V61.736C210.795 51.08 205.947 45.752 196.251 45.752C192.891 45.752 189.579 46.52 186.315 48.056C183.051 49.592 179.979 51.704 177.099 54.392V113H163.275V36.68H174.939Z" stroke="#FFFCFC" stroke-width="6" mask="url(#path-1-outside-1)"/>
+        <path d="M265.833 113H252.009V36.68H265.833V113ZM250.137 12.632C250.137 9.56 250.953 7.304 252.585 5.864C254.313 4.328 256.425 3.56 258.921 3.56C261.513 3.56 263.625 4.328 265.257 5.864C266.985 7.304 267.849 9.56 267.849 12.632C267.849 15.704 266.985 18.008 265.257 19.544C263.625 20.984 261.513 21.704 258.921 21.704C256.425 21.704 254.313 20.984 252.585 19.544C250.953 18.008 250.137 15.704 250.137 12.632Z" stroke="#FFFCFC" stroke-width="6" mask="url(#path-1-outside-1)"/>
+        <path d="M306.283 36.68L307.003 45.896C309.979 42.92 313.483 40.28 317.515 37.976C321.547 35.672 326.059 34.52 331.051 34.52C335.563 34.52 339.403 35.048 342.571 36.104C345.739 37.16 348.283 38.84 350.203 41.144C352.219 43.352 353.659 46.28 354.523 49.928C355.483 53.576 355.963 57.992 355.963 63.176V113H342.139V61.736C342.139 51.08 337.291 45.752 327.595 45.752C324.235 45.752 320.923 46.52 317.659 48.056C314.395 49.592 311.323 51.704 308.443 54.392V113H294.619V36.68H306.283Z" stroke="#FFFCFC" stroke-width="6" mask="url(#path-1-outside-1)"/>
+        <path d="M407.545 45.752C399.481 45.752 394.249 49.736 391.849 57.704L379.897 53.672C383.737 40.904 392.953 34.52 407.545 34.52C417.625 34.52 424.873 37.064 429.289 42.152C433.801 47.144 436.057 55.352 436.057 66.776V100.76C436.057 102.296 436.393 103.352 437.065 103.928C437.833 104.408 438.745 104.648 439.801 104.648C440.569 104.648 441.385 104.552 442.249 104.36C443.113 104.072 443.929 103.736 444.697 103.352L447.001 112.28C445.465 113.048 443.785 113.72 441.961 114.296C440.137 114.872 438.121 115.16 435.913 115.16C432.457 115.16 429.529 114.344 427.129 112.712C424.825 110.984 423.433 107.72 422.953 102.92C421.513 104.456 419.881 105.992 418.057 107.528C416.233 108.968 414.217 110.264 412.009 111.416C409.897 112.568 407.593 113.48 405.097 114.152C402.697 114.824 400.153 115.16 397.465 115.16C394.585 115.16 391.849 114.584 389.257 113.432C386.761 112.376 384.601 110.888 382.777 108.968C380.953 107.048 379.513 104.792 378.457 102.2C377.401 99.512 376.873 96.632 376.873 93.56C376.873 85.688 379.513 79.544 384.793 75.128C390.169 70.712 397.561 68.504 406.969 68.504C409.561 68.504 412.153 68.696 414.745 69.08C417.337 69.464 419.833 70.04 422.233 70.808V61.736C422.233 56.744 420.937 52.856 418.345 50.072C415.753 47.192 412.153 45.752 407.545 45.752ZM401.641 103.928C405.289 103.928 408.841 103.064 412.297 101.336C415.849 99.512 419.161 97.064 422.233 93.992V80.024C420.217 79.352 418.057 78.824 415.753 78.44C413.449 78.056 411.193 77.864 408.985 77.864C406.585 77.864 404.281 78.104 402.073 78.584C399.865 79.064 397.897 79.88 396.169 81.032C394.537 82.184 393.193 83.72 392.137 85.64C391.177 87.464 390.697 89.72 390.697 92.408C390.697 95.576 391.705 98.312 393.721 100.616C395.737 102.824 398.377 103.928 401.641 103.928Z" stroke="#FFFCFC" stroke-width="6" mask="url(#path-1-outside-1)"/>
+		</svg>
+	</div>
+	
+		<div class="jumbotron" id="esittely" style="background-color: #fafafa">
+			<div class="container ">
+				<div class="row">
+					<div class="col-sm-4"><img src="img.jpg" style="width: 100%; max-width: 500px; border-radius: 50%;"></div>
+					<div class="col-sm-4" id="introduction" style="text-align: justify;">
+						<h4>Janina Porkka - Tulevaisuuden fronttidevaaja</h4><br>
+						<p>Moikka! Olen Janina Porkka, toisen vuoden tietojenkäsittelyn opiskelija Haaga-Heliasta. 
+							Tulevaisuudessa haaveeni on päästä kehittämään itseäni front-end-ohjelmoinnissa sekä käyttöliittymäsuunnittelussa.
+							 Portfoliossani voit tutustua projekteiin, joita olen tehnyt. Voit myös ottaa minuun yhteyttä yhteydenttolomakkeella.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row d-flex justify-content-center " id="osaaminen">
+
+		<div class="col-sm-4" id="osaaminen " style="background-color: #ffffff; border: 5px solid black">
+			<h2 style="text-align: center">Osaaminen</h2>
+			<!--jSonin teksti tähän-->
+			<p id="taidot"></p>
+		</div>
+	</div>
+
+	<br><br>
+	<!--Accordion-->
+
+	<div id="accordion">
+		<div class="card">
+			<div class="card-header" id="card-header">
+				<a class="card-link" data-toggle="collapse" href="#collapseOne">
+          HTML, CSS & JS
+        </a>
+			</div>
+			<div id="collapseOne" class="collapse" data-parent="#accordion">
+				<div class="card-body">
+					<!--Sisältö 1-->
+					<div class="row">
+						<div class="col-sm-4" style="text-align: justify; border: 5px solid black;">
+							<br> <br>
+							<img src="front-end.jpg" alt="fronttikoodi" style="height:  50%; width: 50%;">
+
+							<p>HTML-, CSS- ja JavaScript taitojen lisäksi kokemusta löytyy mm. BootStrapista, jSonista ja jQuerysta. Tutustu sivuihin tarkemmin klikkaamalla kuvista </p>
+						</div>
+
+						<div class="col-sm-4" style="text-align: justify; border: 5px solid black;">
+							<a href="http://myy.haaga-helia.fi/~a1800600/digitekniikat/oppimistehtava3.html" target="_blank">        <img src="digikirppis.PNG" alt="kirppari" style="width:100%; height: 80%"></a><br>
+							<p style="font-weight: bold; text-align: center">DigiKirppis</p>
+						</div>
+						<div class="col-sm-4" style="text-align: justify; border: 5px solid black;">
+							<a href="http://myy.haaga-helia.fi/~a1800600/digipalvelut/index.html" target="_blank">        <img src="kupponen.PNG" alt="kupponen" style="width:100%; height: 80%"></a><br>
+							<p style="font-weight: bold; text-align: center">Harjoitustyö</p>
+						</div>
+
+
+					</div>
+
+					<div class="row d-flex justify-content-center">
+						<div class="col-sm-4" style="text-align: justify; border: 5px solid black;">
+							<a href="https://github.com/janskuvatti/redditSearch" target="_blank"><img src="reddit.PNG" alt="Reddei" style="width:100%; height: 80%"></a><br>
+							<p style="font-weight: bold; text-align: center">redditSearch</p>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header" id="card-header">
+				<a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+        Java
+      </a>
+			</div>
+			<div id="collapseTwo" class="collapse" data-parent="#accordion">
+				<!--Sisältö 2-->
+
+				<div class="card-body">
+					<div class="row">
+						<div class="col-sm-4" style="text-align: justify; border: 5px solid black;">
+							<br>
+							<img src="back-end.png" alt="back-end" style="height:  50%; width: 50%;">
+
+							<p>Back-End-tekniikoista minulla on eniten kokemusta Javasta, Pythonista osaan alkeet. Klikkaamalla kuvista pääset GitHub-koodiin. Githubista löydät myös muita tekemiäni Java-projekteja.</p>
+						</div>
+
+						<div class="col-sm-4" style="text-align: justify; border: 5px solid black;">
+							<a href="https://github.com/janskuvatti/java/blob/master/KokonaislukuOhjelma/kokonaisluku/KokonaislukuOhjelma.java" target="_blank">       
+								 <img src="kononaisluku.PNG" alt="kokonaisluku" style="width:100%; height: 80%"></a><br>
+							<p style="font-weight: bold; text-align: center">KokonaislukuOhjelma</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4" style="text-align: justify; border: 5px solid black;">
+							<a href="https://github.com/janskuvatti/java/tree/master/pelaajalista/src/pelaajalista" target="_blank">        <img src="Pelaajalista.PNG" alt="pelaajat" style="width:100%; height: 80%"></a><br>
+							<p style="font-weight: bold; text-align: center">PelaajalistaSovellus</p>
+						</div>
+						<div class="col-sm-4" style="text-align: justify; border: 5px solid black;">
+							<a href="https://github.com/janskuvatti/java/blob/master/palkkalaskuri/src/palkkalaskuri/Palkkalaskuri.java"><img src="palkka.PNG"alt="Palkkalaskuri" style="width:100%; height: 80%"></a><br>
+							<p style="font-weight: bold; text-align: center">Palkkalaskuri</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" id="card-header">
+					<a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+          Muuta
+        </a>
+				</div>
+				<div id="collapseThree" class="collapse" data-parent="#accordion">
+					<!--Sisältö 3-->
+
+					<div class="card-body">
+						<div class="row">
+							<div class="col-sm-8" style="text-align: justify; border: 5px solid black;">
+								<br>
+								<img src="bulletin-board.jpg" alt="taulu" style="height:  50%; width: 100%;">
+
+								<p>Ohjelmointitaitojen lisäksi minulla on hieman kokemusta myös käyttöliittymäsuunnittelusta ja prototyypin rakennuksesta.  Teen myös vapaaehtoistyötä Aspa-säätiön Digi Haltuun-hankkeessa digikaverina, opastan tukea tarvitsevia henkilöitä käyttämään digitaalisia palveluita. </p>
+							</div>
+
+							<div class="col-sm-4" style="text-align: justify; border: 5px solid black;">
+								<a href="https://marvelapp.com/a5000e1/screen/49754725" target="_blank">        <img src="cashless.PNG" alt="cashless" style="width:100%; height: 80%"></a><br>
+								<p style="font-weight: bold; text-align: center">Prototyyppi Cashless-apista</p>
+							</div>
+							<div class="col-sm-8" style="text-align: justify; border: 5px solid black;">
+								<h4>Projekteja ja muuta mukavaa</h4>
+								<br><br>
+								<ul>
+									<p>&#9733 Project Lapland Hotels(toimeksiantaja Lapland Hotels), syksy 2018</p>
+									<p>&#9733 Huomioarvotutkimus Clear Channelille, kevät 2019</p>
+									<p>&#9733 Digiprojekti, kyselylomake Haaga-Helian Moodlesta, kevät 2019</p>
+									<p>&#9733 Digikaveritoiminta Digi Haltuun-hankkeessa, syksy 2018-></p>
+
+
+								</ul>
+							</div>
+
+
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<br><br>
+	<!--Yhteydenottolomake-->
+
+					<div class="row d-flex justify-content-center">
+
+		<div class="container" id="yhteydenotto" style="justify-content: center; vertical-align: middle">
+			
+			<p id="otsikko " style="font-weight: bold ">Yhteydenottolomake</p>
+
+			<form>
+				Nimi:
+				<br>
+
+				<input type="text " id="nimi "  name="nimi " placeholder="nimi ">
+				<br>
+				<br>Puhelinnumero:
+				<br>
+				<input type="tel" id="puh " name="puh "  placeholder="puhelinnumero ">
+				<br>
+				<br>Sähköposti:
+				<br>
+
+				<input type="email" id="sposti "  name="sposti "  placeholder="sähköposti ">
+				<br>
+				<br> Viesti:
+				<br>
+				<textarea id="viesti " name="message"  placeholder="Kirjoita viestisi "></textarea>
+				<br>
+
+				<br>
+				<p style="font-weight: bold ">Haluan, että minuun otetaan yhteyttä:
+				</p>
+
+				<select id="valikko " required>
+                    <option ></option>
+  <option value="phone " >Puhelimitse</option>
+  <option value="email ">Sähköpostitse</option>
+  
+</select>
+				<br><br>
+				<!--Funktion kutsu-->
+				<!-- Modal -->
+				<br>
+	
+			</form>
+							<button type="reset" onclick="laheta() " class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Lähetä</button>
+
+						<div id="myModal" class="modal fade" role="dialog">
+					<div class="modal-dialog" style="border: 5px solid black;">
+
+						<!-- Modal box-->
+						<div class="modal-content" id="myModal">
+							<div class="modal-header" id="modal-header">
+
+								<h4 class="modal-title">Yhteydenotto</h4>
+								<button type="button" id="suljeBoxi" class="close" data-dismiss="modal">&times;</button>
+							</div>
+							<div class="modal-body" id="modal">
+								<p id="modal-text">Teksti</p>
+							</div>
+							<div class="modal-footer" id="modal-footer">
+								<img src="contact.jpg" alt="contact" style=" width: 50%;    border: 5px solid deeppink; vertical-align: middle;">
+							</div>
+						</div>
+
+
+					</div>
+				
+		</div>
+	</div>
+	</div>
+	<br>
+<!--Kuvagalleria-->
+	<div class="tz-gallery" id="galleria" style="background-color: #ffffff; font-weight: bold; border: 5px solid black;">
+<h2 style="text-align: center">Galleria</h2>
+		<div class="row">
+
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<a class="lightbox" href="travel.PNG" alt="kuva1">
+                        <img src="travel.PNG" id="example-image" alt="kuva1">
+                    </a>
+					<div class="caption">
+						<h3>Kuva 1</h3>
+						<p>Matkailusivusto, jossa on käytetty jQueryn slideria ja galleriaa</p>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<a class="lightbox" href="contact.jpg">
+                        <img src="contact.jpg"  id="example-image" alt="kuva3">
+                    </a>
+					<div class="caption">
+						<h3>Kuva 2</h3>
+						<p>Minuun voit ottaa yhteyttä yhteydenottolomakkeella. Yhteystietoni tovat alareunassa, minua saa myös seurata LinkedInissä :) </p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<a class="lightbox" href="bulletin-board.jpg">
+                        <img src="bulletin-board.jpg" id="example-image" alt="kuva4">
+                    </a>
+					<div class="caption">
+						<h3>Kuva 3</h3>
+						<p>Ohjelmointitaitojen lisäksi minulla on mm. projektiosaamista, tutustu osaamiseeni tarkemmin ylempänä olevassa osiossa.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<a class="lightbox" href="opiskelijakirppis.PNG">
+                        <img src="opiskelijakirppis.PNG"  id="example-image" alt="kuva2">
+                    </a>
+					<div class="caption">
+						<h3>Kuva 4</h3>
+						<p>Opintojen aikana olen päässyt myös rakentamaan prototyyppejä. Kuvassa protoversio opiskelijakirppiksestä</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<a class="lightbox" href="gym.PNG">
+                        <img src="gym.PNG"  id="example-image" alt="gym">
+                    </a>
+					<div class="caption">
+						<h3>Kuva 4</h3>
+						<p>Olen opiskellut myös reactia, <a href="https://github.com/janskuvatti/personaltrainerapp" target="_blank">tästä</a>
+						pääset tutustumaan react-kurssilla tekemääni sovellukseen</p>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+<!--Gallerian js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+<script>
+    baguetteBox.run('.tz-gallery');
+</script>
+
+<br><br>
+
+
+	<!--Yhteystiedot-->
+	<div class="jumbotron" id="info">
+			<h2>Yhteystiedot</h2>
+
+			<i class="fa fa-phone"></i>044 9754918
+<br>
+			<i style='font-size:24px' class="fa fa-envelope" aria-hidden="true"></i> janina.porkka@gmail.com
+			<br>
+
+			<a href="https://github.com/janskuvatti" target="_blank"><i style='font-size:24px' class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+			<br>
+			<a href="https://www.linkedin.com/in/janina-porkka-060121158/" target="_blank">	<i style='font-size:24px' class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+	</div>
+	
+	<footer id="foot">
+		<p> &copy;Janina Porkka&hearts;</p>
+	</footer>
+
+
+
+</body>
+
+</html>
