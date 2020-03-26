@@ -55,42 +55,45 @@ var firebaseConfig = {
 
 			document.getElementById("modal").innerHTML = ("Kiitos yhteydenotostasi " + nimi + "! Otan sinuun yhteyttä sähköpostilla osoitteeseen " + email + " tai puhelimitse numeroon " + puhelin);
 		}
-		$.getJSON("http://www.json-generator.com/api/json/get/bVwYelDcLC?indent=2",
-			function(data) {
-				//	var skills = data.skills;
-				var items = [];
-				var skills = data.skills;
+		$.getJSON("skills.json",
+		function(data) {
+			//	var skills = data.skills;
+			var items = [];
+			var skills = data.skills;
+
+$.each(skills, function(key, d) {
+//					// lue json items-taulukkoon
+	items.push(" &#9733" + d + "<br>")
+//
+		})
+//
+//				var ohjelmointi = data.ohjelmointi;
+//				items.push("<p>Ohjelmointi:<ul>");
+//				$.each(ohjelmointi, function(key, d) {
+//					// lue json items-taulukkoon
+//					items.push(" &#9733" + d + "<br>")
+//
+//				});
+//				items.push("</ul></p>")
+//
+//				var suunnittelu = data.suunnittelu;
+//				items.push("<p>Suunnittelu:<ul>");
+//				$.each(suunnittelu, function(key, d) {
+//					// lue json items-taulukkoon
+//					items.push(" &#9733" + d + "<br>")
+//
+//				});
+//				items.push("</ul></p>")
+//
+//				var muut = data.muut;
+//				items.push("<p>Muuta:<ul>");
+//				$.each(muut, function(key, d) {
+//					// lue json items-taulukkoon
+//					items.push(" &#9733" + d + "<br>")
+//
+//				});
+//				items.push("</ul></p>") *
 
 
-
-				var ohjelmointi = data.ohjelmointi;
-				items.push("<p>Ohjelmointi:<ul>");
-				$.each(ohjelmointi, function(key, d) {
-					// lue json items-taulukkoon
-					items.push(" &#9733" + d + "<br>")
-
-				});
-				items.push("</ul></p>")
-
-				var suunnittelu = data.suunnittelu;
-				items.push("<p>Suunnittelu:<ul>");
-				$.each(suunnittelu, function(key, d) {
-					// lue json items-taulukkoon
-					items.push(" &#9733" + d + "<br>")
-
-				});
-				items.push("</ul></p>")
-
-				var muut = data.muut;
-				items.push("<p>Muuta:<ul>");
-				$.each(muut, function(key, d) {
-					// lue json items-taulukkoon
-					items.push(" &#9733" + d + "<br>")
-
-				});
-				items.push("</ul></p>") *
-
-
-					$("#taidot").append(items.join(" "));
-
-			})
+				$("#taidot").append(items.join(" "));
+	})
